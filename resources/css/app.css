@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-ticker {
+    display: inline-block;
+    /* Changed from 20s to 12s for a faster scroll */
+    animation: ticker 12s linear infinite;
+}
+
+.dark .trix-content {
+    background-color: #1f2937; /* A dark background matching your theme */
+    color: #d1d5db; /* Light gray text */
+}
+
+.dark .trix-toolbar .trix-button-group {
+    background-color: #374151; /* Darker toolbar background */
+    border-color: #4b5563;
+}
+
+.dark .trix-toolbar .trix-button {
+    color: #d1d5db;
+}
+
+.dark .trix-toolbar .trix-button:hover {
+    background-color: #4b5563;
+}
